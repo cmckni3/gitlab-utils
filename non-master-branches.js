@@ -3,7 +3,7 @@ var colors = require('colors');
 
 gitlab.projects.all(function(projects) {
   var projects = projects.map(function(project) {
-    return {id: project.id, name: project.name};
+    return {id: project.id, name: project.name_with_namespace};
   });
   projects.forEach(function(project) {
     gitlab.projects.repository.listBranches(project.id, function(result)
