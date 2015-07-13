@@ -1,5 +1,9 @@
 # GitLab Utils
 
+## Requirements
+
+* node.js >= 0.12
+
 ## Setup
 
 * Clone project

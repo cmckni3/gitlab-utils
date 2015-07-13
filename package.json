@@ -2,11 +2,8 @@
   "name": "gitlab-utils",
   "version": "0.1.0",
   "dependencies": {
-    "colors": "^1.0.3",
-    "gitlab": "^1.1.0",
-    "node-gitlab": "^0.2.1",
-    "request": "^2.40.0",
-    "sleep": "^1.1.8"
+    "colors": "1.x",
+    "gitlab": "1.x"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,5 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chris McKnight <cmckni3@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.12"
+  }
 }
