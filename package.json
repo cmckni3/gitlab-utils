@@ -4,7 +4,7 @@
   "dependencies": {
     "colors": "^1.0.3",
     "gitlab": "^1.1.0",
-    "node-gitlab": "^0.2.1",
+    "node-gitlab": "1.x",
     "request": "^2.40.0",
     "sleep": "^1.1.8"
   },
