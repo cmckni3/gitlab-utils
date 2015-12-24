@@ -2,11 +2,9 @@
   "name": "gitlab-utils",
   "version": "0.1.0",
   "dependencies": {
-    "colors": "^1.0.3",
-    "gitlab": "^1.1.0",
-    "node-gitlab": "1.x",
-    "request": "^2.40.0",
-    "sleep": "^1.1.8"
+    "colors": "1.x",
+    "gitlab": "1.x",
+    "sleep": "1.1.x"
   },
   "devDependencies": {},
   "scripts": {
