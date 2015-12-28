@@ -2,7 +2,7 @@ var gitlab = require(process.cwd() + '/gitlab');
 var colors = require('colors');
 var debug  = require('debug')('gitlab-utils:branch-checker');
 
-gitlab.projects.all(function(projects) {
+gitlab.projects.all({archived: false}, function(projects) {
   projects.forEach(function(project) {
     var name = project.name_with_namespace;
     gitlab.projects.repository.listBranches(project.id, function(result) {
