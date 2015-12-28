@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "colors": "1.x",
+    "debug": "2.x",
     "gitlab": "1.x",
     "sleep": "1.1.x"
   },
