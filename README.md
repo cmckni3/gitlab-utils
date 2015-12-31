@@ -1,4 +1,5 @@
-# GitLab Utils
+## GitLab Utils
+[![License](https://img.shields.io/github/license/cmckni3/gitlab-utils.svg)](https://github.com/cmckni3/gitlab-utils/blob/master/MIT-LICENSE)
 
 ## Setup
 
@@ -26,7 +27,12 @@
   node download.js
   ```
 
-* Find project containing branches other than master
+* Find projects containing branches other than master, staging, quality-assurance
   ```bash
   node non-master-branches.js
+  ```
+
+* Find projects without tags
+  ```bash
+  node repos-without-tags.js
   ```
