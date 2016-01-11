@@ -22,17 +22,14 @@
 
 ## Usage
 
-* Clone all GitLab projects
-  ```bash
-  node download.js
-  ```
-
 * Find projects containing branches other than master, staging, quality-assurance
   ```bash
   node non-master-branches.js
+  # alternatively use npm run branch-checker
   ```
 
 * Find projects without tags
   ```bash
   node repos-without-tags.js
+  # alternatively use npm run tags
   ```

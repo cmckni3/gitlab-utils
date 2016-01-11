@@ -9,8 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node non-master-branches.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "branch-checker": "node non-master-branches.js",
+    "tags": "node repos-without-tags.js"
   },
   "author": "Chris McKnight <cmckni3@gmail.com>",
   "license": "MIT"
