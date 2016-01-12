@@ -1,7 +1,8 @@
 var gitlab = require(process.cwd() + '/gitlab');
-require('terminal-colors');
 var debug  = require('debug')('gitlab-utils:release-checker');
 var semver = require('semver');
+
+require('./colors');
 
 gitlab.projects.all({archived: false}, function(projects) {
   projects.forEach(function(project) {
@@ -15,11 +16,11 @@ gitlab.projects.all({archived: false}, function(projects) {
         var stable_tags = valid_tags.filter(function(tag) { return semver.satisfies(tag, '>= 1.x'); });
         var latest_valid_tag = valid_tags.sort(semver.rcompare)[0];
         if (result.length == 0) {
-          console.log(project.name_with_namespace, ':', 'No tags found'.underline.red);
+          console.log(project.name_with_namespace, ':', 'No tags found'.error);
         } else if (valid_tags.length == 0) {
-          console.log(project.name_with_namespace, ':', 'No valid tags found'.underline.red);
+          console.log(project.name_with_namespace, ':', 'No valid tags found'.error);
         } else if (stable_tags.length > 0) {
-          console.log(project.name_with_namespace, ':', 'Stable release found'.underline.green, latest_valid_tag.bold.blue);
+          console.log(project.name_with_namespace, ':', 'Stable release found'.success, latest_valid_tag.info);
         } else {
           var message = [
             project.name_with_namespace,
@@ -27,12 +28,12 @@ gitlab.projects.all({archived: false}, function(projects) {
             'No stable release found'.underline.lightRed
           ];
           if (latest_valid_tag) {
-            message.push('Latest valid tag:', latest_valid_tag.bold.blue)
+            message.push('Latest valid tag:', latest_valid_tag.info)
           }
           console.log(message.join(' '));
         }
       } else {
-        console.log(project.name_with_namespace, ':', 'Empty result returned'.bold.yellow);
+        console.log(project.name_with_namespace, ':', 'Empty result returned'.warn);
       }
     });
   });

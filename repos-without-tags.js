@@ -1,6 +1,7 @@
 var gitlab = require(process.cwd() + '/gitlab');
-require('terminal-colors');
 var debug  = require('debug')('gitlab-utils:tag-checker');
+
+require('./colors');
 
 gitlab.projects.all({archived: false}, function(projects) {
   projects.forEach(function(project) {
@@ -10,10 +11,10 @@ gitlab.projects.all({archived: false}, function(projects) {
       debug(result);
       if (result) {
         if (result.length == 0) {
-          console.log(project.name_with_namespace, ':', 'No tags found'.underline.red);
+          console.log(project.name_with_namespace, ':', 'No tags found'.error);
         }
       } else {
-        console.log(project.name_with_namespace, ':', 'Empty result returned'.bold.yellow);
+        console.log(project.name_with_namespace, ':', 'Empty result returned'.warn);
       }
     });
   });

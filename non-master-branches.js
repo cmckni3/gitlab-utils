@@ -1,6 +1,7 @@
 var gitlab = require(process.cwd() + '/gitlab');
-var colors = require('colors');
 var debug  = require('debug')('gitlab-utils:branch-checker');
+
+require('./colors');
 
 gitlab.projects.all({archived: false}, function(projects) {
   projects.forEach(function(project) {
@@ -11,10 +12,10 @@ gitlab.projects.all({archived: false}, function(projects) {
       if (result) {
         var non_master_branches = result.filter(function(branch) { return branch.name !== 'master' && branch.name !== 'staging' && branch.name !== 'quality-assurance'; }).map(function(branch) { return branch; });
         if (non_master_branches.length !== 0) {
-          console.log(project.name_with_namespace, ':', non_master_branches.map(function(branch) { return colors.red.underline(branch.name); }).join(', '));
+          console.log(project.name_with_namespace, ':', non_master_branches.map(function(branch) { return branch.name.error; }).join(', '));
         }
       } else {
-        console.log(project.name_with_namespace, ':', colors.yellow.bold('Empty result returned'));
+        console.log(project.name_with_namespace, ':', 'Empty result returned'.warn);
       }
     });
   });
