@@ -2,15 +2,17 @@
   "name": "gitlab-utils",
   "version": "0.1.0",
   "dependencies": {
-    "colors": "1.x",
     "debug": "2.x",
     "gitlab": "1.x",
-    "sleep": "1.1.x"
+    "semver": "5.x",
+    "sleep": "1.1.x",
+    "terminal-colors": "0.1.4"
   },
   "devDependencies": {},
   "scripts": {
     "branch-checker": "node non-master-branches.js",
-    "tags": "node repos-without-tags.js"
+    "tags": "node repos-without-tags.js",
+    "releases": "node releases.js"
   },
   "author": "Chris McKnight <cmckni3@gmail.com>",
   "license": "MIT"

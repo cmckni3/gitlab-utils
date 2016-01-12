@@ -1,5 +1,4 @@
 var gitlab = require(process.cwd() + '/gitlab');
-var colors = require('colors');
 
 gitlab.projects.all(function(projects) {
   var projects = projects.map(function(project) {

@@ -33,3 +33,9 @@
   node repos-without-tags.js
   # alternatively use npm run tags
   ```
+
+* Find release status of repos
+  ```bash
+  node releases.js
+  # alternatively use npm run releases
+  ```
