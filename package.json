@@ -15,5 +15,6 @@
     "releases": "node releases.js"
   },
   "author": "Chris McKnight <cmckni3@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/cmckni3/gitlab-utils.git"
 }
