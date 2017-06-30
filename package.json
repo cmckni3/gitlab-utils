@@ -5,7 +5,7 @@
     "debug": "2.x",
     "gitlab": "1.x",
     "semver": "5.x",
-    "sleep": "1.1.x",
+    "sleep": "~5.0.0",
     "terminal-colors": "0.1.4"
   },
   "devDependencies": {},
