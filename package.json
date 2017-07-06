@@ -1,6 +1,9 @@
 {
   "name": "gitlab-utils",
   "version": "0.1.0",
+  "author": "Chris McKnight <cmckni3@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/cmckni3/gitlab-utils.git",
   "dependencies": {
     "debug": "2.x",
     "gitlab": "1.x",
@@ -14,7 +17,7 @@
     "tags": "node repos-without-tags.js",
     "releases": "node releases.js"
   },
-  "author": "Chris McKnight <cmckni3@gmail.com>",
-  "license": "MIT",
-  "repository": "https://github.com/cmckni3/gitlab-utils.git"
+  "engines": {
+    "node": ">= 4"
+  }
 }

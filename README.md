@@ -1,6 +1,10 @@
 ## GitLab Utils
 [![License](https://img.shields.io/github/license/cmckni3/gitlab-utils.svg)](https://github.com/cmckni3/gitlab-utils/blob/master/MIT-LICENSE)
 
+## Requirements
+
+* node.js >= 4
+
 ## Setup
 
 * Clone project
