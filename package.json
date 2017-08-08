@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "https://github.com/cmckni3/gitlab-utils.git",
   "dependencies": {
-    "debug": "2.x",
+    "debug": "^3.0.0",
     "gitlab": "1.x",
     "semver": "5.x",
     "sleep": "~5.0.0",
