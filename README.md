@@ -1,4 +1,6 @@
 ## GitLab Utils
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/cmckni3/gitlab-utils.svg)](https://greenkeeper.io/)
 [![License](https://img.shields.io/github/license/cmckni3/gitlab-utils.svg)](https://github.com/cmckni3/gitlab-utils/blob/master/MIT-LICENSE)
 
 ## Requirements
