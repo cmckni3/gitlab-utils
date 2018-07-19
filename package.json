@@ -11,7 +11,9 @@
     "sleep": "~5.1.1",
     "terminal-colors": "0.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^1.13.7"
+  },
   "scripts": {
     "branch-checker": "node non-master-branches.js",
     "tags": "node repos-without-tags.js",

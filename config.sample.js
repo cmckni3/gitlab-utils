@@ -1,5 +1,4 @@
 module.exports = {
-  url: 'url-to-gitlab',
-  token: 'private-token'
+  url: 'https://gitlab.com',
+  token: 'private-token',
 };
-

@@ -1,21 +1,38 @@
-var gitlab = require(process.cwd() + '/gitlab');
-var debug  = require('debug')('gitlab-utils:branch-checker');
-
+var gitlab = require('./gitlab');
 require('./colors');
+var debug = require('debug')('gitlab-utils:branch-checker');
 
-gitlab.projects.all({archived: false}, function(projects) {
+gitlab.projects.all({ archived: false }, function(projects) {
   projects.forEach(function(project) {
     var name = project.name_with_namespace;
     gitlab.projects.repository.listBranches(project.id, function(result) {
-      debug(project.name_with_namespace, project.id);
+      debug(name, project.id);
       debug(result);
       if (result) {
-        var non_master_branches = result.filter(function(branch) { return branch.name !== 'master' && branch.name !== 'staging' && branch.name !== 'quality-assurance'; }).map(function(branch) { return branch; });
+        var non_master_branches = result
+          .filter(function(branch) {
+            return (
+              branch.name !== 'master' &&
+              branch.name !== 'staging' &&
+              branch.name !== 'quality-assurance'
+            );
+          })
+          .map(function(branch) {
+            return branch;
+          });
         if (non_master_branches.length !== 0) {
-          console.log(project.name_with_namespace, ':', non_master_branches.map(function(branch) { return branch.name.error; }).join(', '));
+          console.log(
+            name,
+            ':',
+            non_master_branches
+              .map(function(branch) {
+                return branch.name.error;
+              })
+              .join(', ')
+          );
         }
       } else {
-        console.log(project.name_with_namespace, ':', 'Empty result returned'.warn);
+        console.log(name, ':', 'Empty result returned'.warn);
       }
     });
   });
