@@ -5,7 +5,7 @@
 
 ## Requirements
 
-* node.js >= 4
+* node.js >= 8
 
 ## Setup
 
@@ -16,7 +16,8 @@
 
 * Install dependencies
   ```bash
-  npm install
+  yarn install
+  # npm install
   ```
 
 * Copy config
@@ -30,18 +31,18 @@
 
 * Find projects containing branches other than master, staging, quality-assurance
   ```bash
-  node non-master-branches.js
-  # alternatively use npm run branch-checker
+  babel-node non-master-branches.js
+  # alternatively use npm run branch-checker or yarn branch-checker
   ```
 
 * Find projects without tags
   ```bash
-  node repos-without-tags.js
-  # alternatively use npm run tags
+  babel-node repos-without-tags.js
+  # alternatively use npm run tags or yarn tags
   ```
 
 * Find release status of repos
   ```bash
-  node releases.js
-  # alternatively use npm run releases
+  babel-node releases.js
+  # alternatively use npm run releases or yarn releases
   ```

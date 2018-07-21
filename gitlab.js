@@ -1,3 +1,14 @@
-var config = require(process.cwd() + '/config');
-var gitlab = new (require('gitlab'))(config);
-module.exports = gitlab;
+const config = require('./config');
+
+import { ProjectsBundle } from 'gitlab';
+
+const services = new ProjectsBundle(config);
+
+const allProjects = () => {
+  return services.Projects.all({ archived: false, membership: true });
+};
+
+module.exports = {
+  services,
+  allProjects,
+};

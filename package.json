@@ -4,22 +4,24 @@
   "author": "Chris McKnight <cmckni3@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/cmckni3/gitlab-utils.git",
+  "scripts": {
+    "branch-checker": "babel-node non-master-branches.js",
+    "tags": "babel-node repos-without-tags.js",
+    "releases": "babel-node releases.js"
+  },
   "dependencies": {
     "debug": "^3.0.0",
-    "gitlab": "1.x",
-    "semver": "5.x",
+    "gitlab": "^3.5.1",
+    "semver": "^5.5.0",
     "sleep": "~5.1.1",
     "terminal-colors": "0.1.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "prettier": "^1.13.7"
   },
-  "scripts": {
-    "branch-checker": "node non-master-branches.js",
-    "tags": "node repos-without-tags.js",
-    "releases": "node releases.js"
-  },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 8"
   }
 }
