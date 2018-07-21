@@ -2,7 +2,6 @@ require('./colors');
 const debug = require('debug')('gitlab-utils:project-tags');
 const process = require('process');
 
-const services = require('./gitlab').services;
 const allProjects = require('./gitlab').allProjects;
 
 async function main() {
@@ -16,7 +15,7 @@ main()
         return project.tag_list.length > 0;
       })
       .forEach(function(project) {
-        var name = project.name_with_namespace;
+        const name = project.name_with_namespace;
         console.log(
           name +
             ' ' +

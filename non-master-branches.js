@@ -5,17 +5,15 @@ const process = require('process');
 const services = require('./gitlab').services;
 const allProjects = require('./gitlab').allProjects;
 
+const BRANCHES_TO_EXCLUDE = ['master', 'staging', 'quality-assurance'];
+
 async function getNonMasterBranches(project) {
   return services.Branches.all(project.id).then(result => {
     debug(result);
     if (result) {
-      var non_master_branches = result
+      const non_master_branches = result
         .filter(function(branch) {
-          return (
-            branch.name !== 'master' &&
-            branch.name !== 'staging' &&
-            branch.name !== 'quality-assurance'
-          );
+          return BRANCHES_TO_EXCLUDE.indexOf(branch.name) == -1;
         })
         .map(function(branch) {
           return branch;
@@ -50,7 +48,7 @@ main()
   .then(projects => {
     let p = Promise.resolve();
     projects.forEach(function(project) {
-      var name = project.name_with_namespace;
+      const name = project.name_with_namespace;
       debug(name, project.id);
       p = p.then(() => getNonMasterBranches(project));
     });

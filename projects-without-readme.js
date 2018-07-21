@@ -1,16 +1,19 @@
-var gitlab = require(process.cwd() + '/gitlab');
-var debug = require('debug')('gitlab-utils:projects-without-readme');
-
 require('./colors');
+const debug = require('debug')('gitlab-utils:project-tags');
+const process = require('process');
 
-gitlab.projects.all(function(projects) {
-  var projects = projects.map(function(project) {
-    return { id: project.id, name: project.name_with_namespace };
-  });
-  projects.forEach(function(project) {
-    gitlab.projects.repository.listTree(project.id, {}, function(result) {
+const services = require('./gitlab').services;
+const allProjects = require('./gitlab').allProjects;
+
+async function main() {
+  return await allProjects();
+}
+
+async function findReadmeFiles(project) {
+  return services.Repositories.tree(project.id, {})
+    .then(result => {
       if (result) {
-        readme_files = result
+        const readme_files = result
           .filter(function(object) {
             return object.type === 'blob';
           })
@@ -18,23 +21,51 @@ gitlab.projects.all(function(projects) {
             return /readme.md/i.test(object.name.toLowerCase());
           });
         if (readme_files.length > 0) {
-          var opts = {
+          const opts = {
             projectId: project.id,
             file_path: readme_files[0].name,
             ref: 'master',
           };
-          gitlab.projects.repository.showFile(opts, function(result) {
-            if (result.size > 0) {
-            } else {
+          return services.RepositoryFiles.showRaw(
+            opts.projectId,
+            opts.file_path,
+            opts.ref
+          ).then(result => {
+            if (!result || result.length === 0) {
               console.log(('No readme for ' + project.name).error);
             }
+            return Promise.resolve();
           });
         } else {
           console.log(('No readme for ' + project.name).error);
+          return Promise.resolve();
         }
       } else {
         console.log(('Could not retrieve tree for ' + project.name).warn);
+        return Promise.resolve();
       }
+    })
+    .catch(err => {
+      return Promise.resolve();
     });
+}
+
+main()
+  .then(projects => {
+    let p = Promise.resolve();
+    projects
+      .map(function(project) {
+        return { id: project.id, name: project.name_with_namespace };
+      })
+      .forEach(function(project) {
+        if (project.name === 'calendar-mover') console.log(project);
+        debug(project.name, project.id);
+        p = p.then(() => findReadmeFiles(project));
+      });
+    return p;
+  })
+  .then(() => process.exit(0))
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
   });
-});

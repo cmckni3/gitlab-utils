@@ -1,7 +1,7 @@
 require('terminal-colors');
 
 // color shortcuts
-var colors = {
+const colors = {
   error: function() {
     return this.underline.red;
   },
