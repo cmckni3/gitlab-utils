@@ -10,16 +10,16 @@
     "releases": "babel-node releases.js"
   },
   "dependencies": {
-    "debug": "^3.0.0",
+    "debug": "3.1.0",
     "gitlab": "^3.5.1",
-    "semver": "^5.5.0",
-    "sleep": "~5.1.1",
+    "semver": "5.5.0",
+    "sleep": "5.1.1",
     "terminal-colors": "0.1.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "prettier": "^1.13.7"
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "prettier": "1.13.7"
   },
   "engines": {
     "node": ">= 8"
