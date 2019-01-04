@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base",
-    ":preserveSemverRanges"
+    "github>cmckni3/renovate-config",
+    ":assignee(cmckni3)"
   ]
 }
