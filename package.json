@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "debug": "^4.0.0",
-    "gitlab": "^3.8.0",
+    "gitlab": "^5.0.0",
     "semver": "^7.5.2",
     "terminal-colors": "0.1.4"
   },
