@@ -1,10 +1,14 @@
-require('./colors');
-const debug = require('debug')('gitlab-utils:release-checker');
 const process = require('process');
+
+require('./utils/colors');
+const gitlab_util = require('./utils/gitlab');
+
+const debug = require('debug')('gitlab-utils:release-checker');
+
 const semver = require('semver');
 
-const services = require('./gitlab').services;
-const allProjects = require('./gitlab').allProjects;
+const services = gitlab_util.services;
+const allProjects = gitlab_util.allProjects;
 
 async function main() {
   return await allProjects();

@@ -1,6 +1,6 @@
 ## GitLab Utils
 
-[![License](https://img.shields.io/github/license/cmckni3/gitlab-utils.svg)](https://github.com/cmckni3/gitlab-utils/blob/master/MIT-LICENSE)
+[![License](https://img.shields.io/github/license/cmckni3/gitlab-utils.svg)](https://github.com/cmckni3/gitlab-utils/blob/master/LICENSE)
 
 ## Requirements
 
@@ -30,18 +30,21 @@
 
 * Find projects containing branches other than master, staging, quality-assurance
   ```bash
-  babel-node non-master-branches.js
-  # alternatively use npm run branch-checker or yarn branch-checker
+  babel-node src/branch-checker.js
+  # alternatively use npm/yarn
+  # npm run branch-checker
+  # yarn branch-checker
   ```
 
 * Find projects without tags
   ```bash
-  babel-node repos-without-tags.js
-  # alternatively use npm run tags or yarn tags
+  babel-node src/tag-checker.js
   ```
 
 * Find release status of repos
   ```bash
-  babel-node releases.js
-  # alternatively use npm run releases or yarn releases
+  babel-node src/release-checker.js
+  # alternatively use npm/yarn
+  # npm run release-checker
+  # yarn release-checker
   ```

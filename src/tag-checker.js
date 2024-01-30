@@ -1,9 +1,12 @@
-require('./colors');
-const debug = require('debug')('gitlab-utils:tag-checker');
 const process = require('process');
 
-const services = require('./gitlab').services;
-const allProjects = require('./gitlab').allProjects;
+require('./utils/colors');
+const gitlab_util = require('./utils/gitlab');
+
+const debug = require('debug')('gitlab-utils:tag-checker');
+
+const services = gitlab_util.services;
+const allProjects = gitlab_util.allProjects;
 
 async function main() {
   return await allProjects();

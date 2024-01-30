@@ -5,9 +5,11 @@
   "license": "MIT",
   "repository": "https://github.com/cmckni3/gitlab-utils.git",
   "scripts": {
-    "branch-checker": "babel-node non-master-branches.js",
-    "tags": "babel-node repos-without-tags.js",
-    "releases": "babel-node releases.js"
+    "branch-checker": "babel-node src/branch-checker.js",
+    "project-tags": "babel-node src/project-tags.js",
+    "project-without-readme": "babel-node src/projects-without-readme.js",
+    "release-checker": "babel-node src/release-checker.js",
+    "tag-checker": "babel-node src/tag-checker.js"
   },
   "dependencies": {
     "debug": "^4.3.1",

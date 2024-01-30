@@ -1,4 +1,5 @@
-const config = require('./config');
+// TODO: @cmckni3 2024-01-30 Implement better secrets management
+const config = require('../../config');
 
 import { ProjectsBundle } from 'gitlab';
 

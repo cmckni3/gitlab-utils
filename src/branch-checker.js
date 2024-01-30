@@ -1,9 +1,12 @@
-require('./colors');
-const debug = require('debug')('gitlab-utils:branch-checker');
 const process = require('process');
 
-const services = require('./gitlab').services;
-const allProjects = require('./gitlab').allProjects;
+require('./utils/colors');
+const gitlab_util = require('./utils/gitlab');
+
+const services = gitlab_util.services;
+const allProjects = gitlab_util.allProjects;
+
+const debug = require('debug')('gitlab-utils:branch-checker');
 
 const BRANCHES_TO_EXCLUDE = ['master', 'staging', 'quality-assurance'];
 
