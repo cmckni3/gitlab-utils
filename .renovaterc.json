@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
+    ":dependencyDashboard",
     "github>cmckni3/renovate-config",
     ":assignee(cmckni3)"
   ],
