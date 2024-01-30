@@ -4,7 +4,8 @@
 
 ## Requirements
 
-* node.js >= 8
+* [node.js 18.x](https://nodejs.org)
+* [yarn 1.x](https://yarnpkg.com)
 
 ## Setup
 
