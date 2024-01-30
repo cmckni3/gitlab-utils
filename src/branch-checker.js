@@ -8,7 +8,8 @@ const allProjects = gitlab_util.allProjects;
 
 const debug = require('debug')('gitlab-utils:branch-checker');
 
-const BRANCHES_TO_EXCLUDE = ['master', 'staging', 'quality-assurance'];
+// TODO: Maybe make this an option
+const BRANCHES_TO_EXCLUDE = ['master', 'dev', 'develop', 'staging', 'quality-assurance'];
 
 async function getNonMasterBranches(project) {
   return services.Branches.all(project.id).then(result => {
