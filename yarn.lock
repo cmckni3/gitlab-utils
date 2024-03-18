@@ -2,32 +2,32 @@
 # yarn lockfile v1
 
 
-"@gitbeaker/core@^39.34.0":
-  version "39.34.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.34.0.tgz#ea5724688ddd4814a0ce399a72c8a4e9b16bd89d"
-  integrity sha512-2DHxkmF+IYFv6zLOJ5sy1PGrGXSDGKUJj7l6c5BXfmKVS9kgAfaqslZsdonh3wVtyEClEUPHez2Gq6vI/r35bg==
+"@gitbeaker/core@^40.0.1":
+  version "40.0.1"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-40.0.1.tgz#3b5332936b5965312349c97cbf695fa1ab5b45d9"
+  integrity sha512-Zh2eVUgy2kYVnp7Db4gWoFqFbjgsnm2FvBEERbH3UM3cOA/iMqM+tw/of+Qk4yO+gv6tGZ9f4nF7+vK0tQFmDA==
   dependencies:
-    "@gitbeaker/requester-utils" "^39.34.0"
+    "@gitbeaker/requester-utils" "^40.0.1"
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/requester-utils@^39.34.0":
-  version "39.34.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.34.0.tgz#ee91cc220fa8af537be1b6bd23432252d6347dca"
-  integrity sha512-82XEPAlYwC475I4vjj/SKM50ptdvMCuX5aeW4XE3eYnjc2rNh/mLDbgGRu2P4wzb2x+yHxY6W8NpcfZ39Ek2wQ==
+"@gitbeaker/requester-utils@^40.0.1":
+  version "40.0.1"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-40.0.1.tgz#d3ae8b1844d2db6ff80e2b7a81b0276a8237c9f0"
+  integrity sha512-cn6fltKuQ3TbthoMTg+JsKQfozqGcRcz1jT9Nqzr4gpHWgjdQ/nr5JpjwzKABQNVL2JH3UJWr6Eji60CFZDZ6Q==
   dependencies:
     picomatch-browser "^2.2.6"
     qs "^6.11.2"
     rate-limiter-flexible "^4.0.0"
     xcase "^2.0.1"
 
-"@gitbeaker/rest@^39.0.0":
-  version "39.34.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.34.0.tgz#cd2b16c5a8e79b80e70cd780de907b939c5d7e4b"
-  integrity sha512-9EDO4HVAjaRjU6K0h2B7cPpv2gGY9fxO+a2p4gxbQo30ikKOeQFE0UtU2QLnztin8WPcB0S8sOOoMVGBWhxb0Q==
+"@gitbeaker/rest@^40.0.0":
+  version "40.0.1"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-40.0.1.tgz#e77f5a180b62e814057e789f2ffa4d56127be458"
+  integrity sha512-JEd9WNuzgur7gLiJPMWPYKaWe5uX1ic8CGKR1fMtBityFZ2xyZkTZ+LG0nqWTV1MyiowYnJ1swTh8Yff+kLsKA==
   dependencies:
-    "@gitbeaker/core" "^39.34.0"
-    "@gitbeaker/requester-utils" "^39.34.0"
+    "@gitbeaker/core" "^40.0.1"
+    "@gitbeaker/requester-utils" "^40.0.1"
 
 abbrev@1:
   version "1.1.1"
