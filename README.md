@@ -37,9 +37,12 @@
   # yarn branch-checker
   ```
 
-* Find projects without tags
+* Find projects without git tags
   ```bash
   babel-node src/tag-checker.js
+  # alternatively use npm/yarn
+  # npm run tag-checker
+  # yarn tag-checker
   ```
 
 * Find release status of repos
@@ -49,3 +52,12 @@
   # npm run release-checker
   # yarn release-checker
   ```
+
+* Find projects with project tags (topics)
+  ```bash
+  babel-node src/projects-tags.js
+  # alternatively use npm/yarn
+  # npm run projects-tags
+  # yarn projects-tags
+  ```
+
