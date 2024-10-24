@@ -12,8 +12,8 @@
     "tag-checker": "babel-node src/tag-checker.js"
   },
   "dependencies": {
-    "debug": "^4.0.0",
     "@gitbeaker/rest": "^41.0.0",
+    "debug": "^4.0.0",
     "semver": "^7.0.0",
     "terminal-colors": "0.1.4"
   },
