@@ -1,9 +1,10 @@
 {
   "name": "gitlab-utils",
   "version": "0.1.0",
-  "author": "Chris McKnight <cmckni3@gmail.com>",
+  "author": "Chris McKnight",
   "license": "MIT",
   "repository": "https://github.com/cmckni3/gitlab-utils.git",
+  "private": true,
   "scripts": {
     "branch-checker": "babel-node src/branch-checker.js",
     "projects-tags": "babel-node src/projects-tags.js",
@@ -23,6 +24,6 @@
     "prettier": "^3.0.0"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 18"
   }
 }
