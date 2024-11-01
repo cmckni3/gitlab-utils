@@ -25,7 +25,7 @@
   cp config.sample.js config.js
   ```
 
-* Add GitLab URL and private token to config.js
+* Add GitLab URL and private token to `config.js`
 
 ## Usage
 
