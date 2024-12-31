@@ -2,32 +2,32 @@
 # yarn lockfile v1
 
 
-"@gitbeaker/core@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-41.1.0.tgz#41508bccac5e69cf10b607fc0dedac4ce8f49623"
-  integrity sha512-OyxX1pTF+Gr4y172b+hlKNIHeLmC0qWlKm3Vn5gCC69o7UVoBXGUFEp853+A+jz0xlVVEUK3x9G30R/WY9Sgbg==
+"@gitbeaker/core@^42.0.1":
+  version "42.0.1"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-42.0.1.tgz#fb883dfe26c0d51d189dcb05c2ec9bba4e4d6a15"
+  integrity sha512-GvInXJuYY4efbaLl55BSFsrt2mGRl2aqYmpNx2N/wSHGWj+RyuvoTY5V3oGabjaQv2MjjKDW+zLajUQ6jVNg2g==
   dependencies:
-    "@gitbeaker/requester-utils" "^41.1.0"
+    "@gitbeaker/requester-utils" "^42.0.1"
     qs "^6.12.2"
     xcase "^2.0.1"
 
-"@gitbeaker/requester-utils@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-41.1.0.tgz#2484fb8cb26b1640fc4d32d3d8331b035f546f0e"
-  integrity sha512-SF0oI1pWf0oglUpyOZ2mSunIY3upM4+pZ05Dpt+5iYBJAJZ9l1G0e7hsJJfQnDiev+csQCiqpygAdcd4k65Wqw==
+"@gitbeaker/requester-utils@^42.0.1":
+  version "42.0.1"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-42.0.1.tgz#680b2e9e5898942931853f470738a3a00d12083f"
+  integrity sha512-xeZh95cAF2i7blGEpKEZ2uNHirYcABzpuLiWwvc1FiM4iKxS+4sYLM5XL31a2oJzIgi3/AFZ82RZ3O1M6O+c3A==
   dependencies:
     picomatch-browser "^2.2.6"
     qs "^6.12.2"
     rate-limiter-flexible "^4.0.1"
     xcase "^2.0.1"
 
-"@gitbeaker/rest@^41.0.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-41.1.0.tgz#987dfe13d056e1ef7184701540686e824c7331a8"
-  integrity sha512-he8IS5rRV6od2wPyUa7ZhMm0F2KvL84e8TpymsEf9n3dpHUJPB3gN6C/sWNWVZWOQV8M+1glJWKVvm+6WmC3kQ==
+"@gitbeaker/rest@^42.0.0":
+  version "42.0.1"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-42.0.1.tgz#3eef7571eda283751c637f81745c624774e0e42a"
+  integrity sha512-gMszyYrGPL5FsbHQBM+2MDYF1H5SN83J0LkO0AylQFoNGa0y4guVIRpcufyw2hOn/jyw5VF98DTJU1oCgLcr2w==
   dependencies:
-    "@gitbeaker/core" "^41.1.0"
-    "@gitbeaker/requester-utils" "^41.1.0"
+    "@gitbeaker/core" "^42.0.1"
+    "@gitbeaker/requester-utils" "^42.0.1"
 
 abbrev@1:
   version "1.1.1"
